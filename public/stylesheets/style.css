@@ -22,12 +22,44 @@ body {
 }
 
 .chicago {
-  background: url(../images/01520_chicagoskyline_1680x1050.jpg) 50% 0 repeat fixed; min-height: 1000px;
+  background: url(../images/01520_chicagoskyline_1680x1050.jpg) 50% 0 no-repeat fixed;
+  min-height: 1000px;
 }
 
 .vandy {
-  background: url(../images/WILSONLAWN.jpg) 50% 0 repeat fixed; min-height: 1000px;
+  background: url(../images/vandy-panam.jpg) 50% -25% no-repeat fixed;
+  min-height: 1000px;
 }
 .solon {
-  background: url(../images/solon_air.jpg) 50% 0 repeat fixed; min-height: 1000px;
+  background: url(../images/solon_air.jpg) 50% -50% no-repeat fixed;
+  min-height: 1000px;
+}
+
+.divider {
+  position: relative;
+  background: #111;
+  margin: 0;
+  padding: 10px;
+  min-height: 22em;
+  box-shadow: 0 0 100px 100px #111;
+  z-index: 100;
+}
+
+.story-container {
+  margin-top: 60%;
+}
+
+.story-box {
+  width: 80px;
+  height: 80px;
+  padding: 3em;
+  background: url(../images/moon2.png) center center;
+  box-shadow: 0 0 800px 5px #D2D1D3;
+  opacity: 0.95;
+  border-radius: 250px;
+  position: relative;
+}
+
+.center {
+  text-align: center;
 }
