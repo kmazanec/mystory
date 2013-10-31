@@ -27,8 +27,8 @@ body {
 }
 
 .vandy {
-  background: url(../images/vandy-panam.jpg) 50% -25% no-repeat fixed;
-  min-height: 1000px;
+  background: url(../images/vandy-pana-smaller.jpg) 0 0 no-repeat fixed;
+  min-height: 2700px;
 }
 .solon {
   background: url(../images/solon_air.jpg) 50% -50% no-repeat fixed;
