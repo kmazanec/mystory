@@ -49,7 +49,7 @@ body {
   margin-top: 60%;
 }
 
-.story-box {
+.moon {
   width: 80px;
   height: 80px;
   padding: 3em;
@@ -62,4 +62,28 @@ body {
 
 .center {
   text-align: center;
+}
+
+.narrative {
+  width: 270px;
+  height: 170px;
+  padding: 15px;
+  position: relative;
+  background: url(../images/vandy-grass-blur-feather.png) center no-repeat;
+
+}
+
+.vandy-story-1 {
+  top: 450px;
+  left: 40%;
+}
+
+.vandy-story-2 {
+  top: 1000px;
+  left: 60%;
+}
+
+.vandy-story-3 {
+  top: 1400px;
+  left: 30%;
 }

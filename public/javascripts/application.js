@@ -1,4 +1,5 @@
 var windowWidth = $(window).width();
+var windowHeight = $(window).height();
 
 $(document).ready(function(){
   $('section[data-type="background"]').each(function(){
@@ -15,8 +16,37 @@ $(document).ready(function(){
 
   Moon.init();
   VandyPan.init();
+  StoryPanels.init();
+
 
 });
+
+function StoryPanel($panel){
+  this.$panel = $panel;
+  this.xoffset = $panel.offset().left;
+  this.yoffset = $panel.offset().top;
+}
+
+StoryPanel.prototype.move = function(xPos) {
+  if (this.yoffset < $(window).scrollTop() + windowHeight/2 ){
+    this.$panel.css({'left': (xPos+this.xoffset)+'px'});
+  }
+};
+
+var StoryPanels = {
+  init: function(){
+    this.panels = [];
+    $('div[data-type="story"]').each(function(){
+      StoryPanels.panels.push(new StoryPanel($(this)));
+    });
+  },
+  move: function(xPos){
+    StoryPanels.panels.forEach(function(panel){
+      panel.move(xPos);
+    });
+  }
+};
+
 
 var VandyPan = {
   init: function() {
@@ -25,11 +55,13 @@ var VandyPan = {
   },
   move: function(){
     var xPos = this.offset - $(window).scrollTop();
-    if (xPos > 0 || xPos <= windowWidth - 3240) {
+    if (xPos > -20 || xPos <= windowWidth - 3240) {
       return false;
+    } else {
+      StoryPanels.move(xPos);
+      var coords = xPos+'px 0';
+      this.$vandy.css({ backgroundPosition: coords });
     }
-    var coords = xPos+'px 0';
-    this.$vandy.css({ backgroundPosition: coords });
   }
 };
 
@@ -53,3 +85,5 @@ var Moon = {
                     'top' : newYPos+'px'});
   }
 };
+
+

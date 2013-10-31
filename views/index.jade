@@ -5,29 +5,24 @@ block content
     div.pure-u-1-5.pure-hidden-phone
     div.pure-u-2-5.l-box
       div.story-container
-        div#moon.story-box.center
+        div#moon.moon.center
           h3 Hi, I'm Keith
     div.pure-u-2-5
 
   section.divider
 
-  section#vandy.pure-g-r.bg-img.vandy(data-type="panorama" data-speed="10")
-    div.pure-u-1-2.l-box
-      h1= title
-      p Welcome to #{title}
+  section#vandy.bg-img.vandy(data-type="panorama" data-speed="10")
+    div.narrative.vandy-story-1(data-type="story")
+      h2= title
       p.
         This is a pretty long paragraph with lots of text
-        about me and things that we all say and other things
-        like that which can not fit on one page right now
-        because there is just so much text and no one can
-        seem to get to the bottom of it.  When we do finally
-        find the bottom of it we will then take the time to
-        make something special out of the things that we find
-        with all this empty text and other space-filling things
-        that are here simply to take up space and have no real
-        meaning except to indicate the person who is really
-        interesting right now.
-    div.pure-u-1-2.l-box
+        about me and things that we all 
+    div.narrative.vandy-story-2(data-type="story")
+      div
+        h2 My first name is
+        h2= first_name
+        p And my last name is #{last_name}
+    div.narrative.vandy-story-3(data-type="story")
       div
         h2 My first name is
         h2= first_name
