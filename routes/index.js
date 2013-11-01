@@ -4,5 +4,5 @@
  */
 
 exports.index = function(req, res){
-  res.render('index', { title: 'keithmazanec.com', first_name: 'Keith', last_name: 'Mazanec' });
+  res.render('landing', { title: 'keithmazanec.com', first_name: 'Keith', last_name: 'Mazanec' });
 };
