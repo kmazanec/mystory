@@ -1,0 +1,87 @@
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+  font-family: 'Quicksand', sans-serif;
+}
+a, p {
+  font-weight: 400;
+  font-family: 'Quicksand', sans-serif;  
+}
+
+.pure-g-r > div {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.tag-hover {
+  font-family: 'Quicksand', sans-serif;
+  height: 1em;
+  font-size: 1em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  margin: 0;
+  padding: 5px;
+  background-color: #FE8B52;
+  text-align: center;
+  color: #333;
+  opacity: 0.9;
+  border-radius: 2px;
+  border: 1px solid #888;
+  float: left;
+}
+
+.l-box {
+  padding: 1em;
+}
+
+.center-horizontal-simple {
+  margin-top: 10em;
+}
+
+.backdrop {
+  background: url("../images/03381_wielkilipnik_1280x800.jpg");
+}
+
+.panel {
+  /*background: #57A3E8;*/
+  background: url("../images/03381_wielkilipnik_1280x800_blur.jpg") 0 0 fixed;
+  border: 1px solid #888;
+  color: #eee;
+}
+
+.shadow {
+  box-shadow: 1px 1px 6px 1px #666;
+}
+
+.social-icon {
+  padding: 0 0.5em;
+  font-size: 2.5em;
+}
+
+.social-box {
+  margin-bottom: 1em;
+}
+
+.shadow-text {
+  text-shadow: 1px 1px 2px #666;  
+}
+
+.icon-style {
+  text-shadow: 1px 1px 2px #666;
+  color: #eee;
+}
+.icon-style:hover {
+  text-shadow: 2px 2px 4px #666;
+  color: #FE8B52;
+}
+
+.pure-button:hover {
+  background-color: #FE8B52;
+}
+
+.panel a {
+  color: #222;
+  text-decoration: none;
+}
