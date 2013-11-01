@@ -23,13 +23,21 @@ $(document).ready(function(){
 
 function StoryPanel($panel){
   this.$panel = $panel;
+  this.initial_pos = $panel.css('top');
   this.xoffset = $panel.offset().left;
   this.yoffset = $panel.offset().top;
+  this.relative_yoffset = this.yoffset - $panel.parent().offset().top;
 }
 
-StoryPanel.prototype.move = function(xPos) {
+StoryPanel.prototype.move = function() {
+  var move_diff = ($(window).scrollTop() + windowHeight/2) - this.yoffset;
   if (this.yoffset < $(window).scrollTop() + windowHeight/2 ){
-    this.$panel.css({'left': (xPos+this.xoffset)+'px'});
+    this.$panel.css({'left': (this.xoffset - move_diff)+'px'});
+    this.$panel.css({'top': ($(window).scrollTop() + windowHeight/2)+'px',
+                    'position': 'absolute'});
+  } else {
+    this.$panel.css({'top': this.initial_pos,
+                     'position': 'relative'});
   }
 };
 
@@ -58,7 +66,7 @@ var VandyPan = {
     if (xPos > -20 || xPos <= windowWidth - 3240) {
       return false;
     } else {
-      StoryPanels.move(xPos);
+      StoryPanels.move();
       var coords = xPos+'px 0';
       this.$vandy.css({ backgroundPosition: coords });
     }
